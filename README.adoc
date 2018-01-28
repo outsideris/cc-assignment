@@ -1,1 +1,3 @@
 = CC-assignment
+
+image:https://circleci.com/gh/outsideris/cc-assignment.svg?style=svg["CircleCI", link="https://circleci.com/gh/outsideris/cc-assignment"]
