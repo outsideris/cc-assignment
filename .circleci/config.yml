@@ -24,3 +24,11 @@ jobs:
       - run:
           name: Test
           command: npm test
+      - run: bash .circleci/setup-heroku.sh
+      - deploy:
+          name: Deploy Master to Heroku
+          command: |
+            if [ "${CIRCLE_BRANCH}" == "master" ]; then
+              git push heroku master
+              heroku restart
+            fi
