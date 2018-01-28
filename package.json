@@ -1,0 +1,24 @@
+{
+  "name": "assignment",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index",
+    "test": "npm t"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/outsideris/cc-assignment.git"
+  },
+  "author": "JeongHoon Byun",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/outsideris/cc-assignment/issues"
+  },
+  "homepage": "https://github.com/outsideris/cc-assignment#readme",
+  "dependencies": {
+    "finalhandler": "^1.1.0",
+    "serve-static": "^1.13.1"
+  }
+}

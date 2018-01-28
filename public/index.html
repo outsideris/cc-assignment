@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Assignment</title>
+</head>
+<body>
+  <button id="btn">Click me!</button>
+  <h2 id="heading"></h2>
+
+  <script>
+    var btn = document.getElementById('btn');
+    var h2 = document.getElementById('heading');
+    btn.addEventListener('click', function() {
+      h2.innerHTML = 'Hello World!';
+      btn.parentNode.removeChild(btn);
+    });
+  </script>
+</body>
+</html>
