@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "node index",
-    "test": "npm t"
+    "pretest": "if [ ! -e test/selenium-server-standalone.jar ]; then wget http://selenium-release.storage.googleapis.com/3.8/selenium-server-standalone-3.8.0.jar -O test/selenium-server.jar; fi",
+    "test": "concurrently --kill-others 'npm start' 'nightwatch --config test/nightwatch.conf.js'"
   },
   "repository": {
     "type": "git",
@@ -20,5 +21,10 @@
   "dependencies": {
     "finalhandler": "^1.1.0",
     "serve-static": "^1.13.1"
+  },
+  "devDependencies": {
+    "chromedriver": "^2.35.0",
+    "concurrently": "^3.5.1",
+    "nightwatch": "^0.9.19"
   }
 }

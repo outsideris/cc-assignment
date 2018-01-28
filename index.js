@@ -11,3 +11,7 @@ const server = http.createServer((req, res) => {
 server.listen(3000, () => {
   console.log('The server launched on http://127.0.0.1:3000');
 });
+
+process.on('SIGTERM', function() {
+  process.exit(0);
+});
