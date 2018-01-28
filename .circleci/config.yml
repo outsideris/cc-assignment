@@ -30,6 +30,6 @@ jobs:
           command: |
             if [ "${CIRCLE_BRANCH}" == "master" ]; then
               git fetch heroku
-              git push heroku master
+              git push heroku +master
               heroku restart
             fi
