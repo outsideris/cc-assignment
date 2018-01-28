@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node index",
     "pretest": "if [ ! -e test/selenium-server-standalone.jar ]; then wget http://selenium-release.storage.googleapis.com/3.8/selenium-server-standalone-3.8.0.jar -O test/selenium-server.jar; fi",
-    "test": "concurrently --kill-others 'npm start' 'nightwatch --config test/nightwatch.conf.js'"
+    "test": "concurrently --kill-others -s first 'npm start' 'nightwatch --config test/nightwatch.conf.js'"
   },
   "repository": {
     "type": "git",
